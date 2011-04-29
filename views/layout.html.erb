@@ -1,6 +1,8 @@
-<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>HTML to Tree Graph</title>
+    <title>SiteTree</title>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
     <style type='text/css'>
     </style>
@@ -10,16 +12,15 @@
     <script language="javascript" type="text/javascript" src="/js/graph.js"></script>
   </head>
   <body>
-
-    <h1>HTML to Tree Graph</h1>
+    <h1 id="site-title">SiteTree</h1>
     <% if @message %>
       <div id="flash_message"><%= @message %></div>
     <% end %>
-    <form action='/' method='POST'>
+    <form id="main-form" action='/' method='POST'>
       <p>
-        <label for="link"> Web site link:</label>
-        <input name='link' />
-        <input class='submit' type='submit' value='Do the Magic' />
+        <label class="site-url" for="site-url">Site URL:</label>
+        <input class="site-url" type="text" name="site-url" />
+        <input class="button" type="submit" value="Plant it!" />
       </p>
     </form>
 
@@ -40,8 +41,8 @@
       <script> window.onload = function() {init("<%= @json_nodes %>");}; </script>
     <% end %>
 
-    <p>
-      HTML2Graph is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/pt/">Creative Commons Attribution-Share Alike 2.5 Portugal License</a>.
-    </p>
+    <div id="footer">
+      <p>SiteTree is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/pt/">Creative Commons Attribution-Share Alike 2.5 Portugal License</a>.</p>
+    </div>
   </body>
 </html>

@@ -1,18 +1,34 @@
-body { background-color: #679; color: #222; text-align: left; font-family: arial, sans-serif; font-size: 62.5%; }
-h1 { color: #f00; margin-bottom: 1em; font-size: 1.5em; }
-
-#log {
-    position:absolute;
-    top:10px;
-    font-size:1.0em;
-    font-weight:bold;
-    color:#23A4FF;
+@font-face {
+    font-family: 'WoodLookRegular';
+    src: url('/fonts/woodlook-webfont.eot');
+    src: url('/fonts/woodlook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/woodlook-webfont.woff') format('woff'),
+         url('/fonts/woodlook-webfont.ttf') format('truetype'),
+         url('/fonts/woodlook-webfont.svg#WoodLookRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-#infovis {
-    position:relative;
-    width:600px;
-    height:600px;
-    margin:auto;
-    overflow:hidden;
-}
+
+body                  { background-color: #ECECEC; color: #666; font-family: Helvetica, Verdana; }
+a                     { text-decoration: none; }
+
+h1#site-title         { color: #8d6319; font-family: 'WoodLookRegular'; font-size: 6em; margin: 0.5em 0 2em; text-align: center; }
+h1#site-title         { -moz-text-shadow: 3px 3px 2px #BBB; -webkit-text-shadow: 3px 3px 2px #BBB; text-shadow: 3px 3px 2px #BBB; }
+form#main-form        { text-align: center; }
+
+label.site-url        { font-size: 1.1em; margin: 0 0.6em 0 0; }
+input.site-url        { border: 1px solid #BBB; font-size: 1.1em; padding: 5px; width: 400px; }
+input.site-url:hover,
+input.site-url:focus  { border: 1px solid #999; }
+input.site-url:focus  { -moz-box-shadow: 0 0 6px #CCC; -webkit-box-shadow: 0 0 6px #CCC; box-shadow: 0 0 6px #CCC; }
+
+input.button          { color: #666; font-size: 1.1em; padding: 4px; }
+
+#log                  { position:absolute; top:10px; font-size:1.0em; font-weight:bold; color:#23A4FF; }
+
+#infovis              { position:relative; width:600px; height:600px; margin:auto; overflow:hidden; }
+
+div#footer            { bottom: 0; font-size: 0.9em; position: fixed; margin: 1.5em; text-align: center; width: 100%; }
+div#footer a          { color: #5aac00; }
+div#footer a:hover    { text-decoration: underline; }
