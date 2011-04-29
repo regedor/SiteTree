@@ -9,12 +9,12 @@ get '/' do
 end
 
 post '/' do
-  url =  params[:link][0..6] == "http://" ? params[:link] : "http://" + params[:link] 
-  @message = "Bem vindo a este site maravilhoso!"
+  url =  params[:"site-url"][0..6] == "http://" ? params[:"site-url"] : "http://" + params[:"site-url"] 
+  @message = ""
   begin
     @json_nodes = generate_json_nodes Nokogiri::HTML(open(url))
   rescue
-    @message = "Estoutrou!"
+    @message = "Invalid URL."
   end
   erb :"layout.html"
 end
