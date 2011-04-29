@@ -9,67 +9,35 @@
     <script language="javascript" type="text/javascript" src="/js/example2.js"></script>
   </head>
   <body>
-    <div id='wrapper'>
-      <h1>HTML to Tree Graph</h1>
-      <form action='/' method='POST'>
-        <p>
-          <input name='link' />
-          <input class='submit' type='submit' value='Do the Magic' />
-        </p>
-      </form>
-    </div>
-    <div id='content'>
 
-               <div id="center-container">
-                   <div id="infovis"></div>    
-               </div>
-               
-               <div id="right-container">
-               
-               <h4>Change Tree Orientation</h4>
-               <table>
-                   <tr>
-                       <td>
-                           <label for="r-left">left </label>
-                       </td>
-                       <td>
-                           <input type="radio" id="r-left" name="orientation" checked="checked" value="left" />
-                       </td>
-                   </tr>
-                   <tr>
-                        <td>
-                           <label for="r-top">top </label>
-                        </td>
-                        <td>
-                           <input type="radio" id="r-top" name="orientation" value="top" />
-                        </td>
-                   <tr>
-                        <td>
-                           <label for="r-bottom">bottom </label>
-                         </td>
-                         <td>
-                           <input type="radio" id="r-bottom" name="orientation" value="bottom" />
-                         </td>
-                   </tr>
-                   <tr>
-                         <td>
-                           <label for="r-right">right </label>
-                         </td> 
-                         <td> 
-                          <input type="radio" id="r-right" name="orientation" value="right" />
-                         </td>
-                   </tr>
-               </table>
-               </div>
-               <div id="log"></div>
-               <script>
-                 window.onload = function() {
-                   var json = "<%= @json_nodes %>";
-                   init(json);	  
-                 };
-               </script>
+    <h1>HTML to Tree Graph</h1>
+    <% if @message %>
+      <div id="flash_message"><%= @message %></div>
+    <% end %>
+    <form action='/' method='POST'>
+      <p>
+        <label for="link"> Web site link:</label>
+        <input name='link' />
+        <input class='submit' type='submit' value='Do the Magic' />
+      </p>
+    </form>
 
-    </div>
+    <% unless @message %>
+      <div id="controllers">
+        <h2>Change Tree Orientation</h2>
+        <label for="r-left">left </label>
+        <input type="radio" id="r-left" name="orientation" checked="checked" value="left" />
+        <label for="r-top">top </label>
+        <input type="radio" id="r-top" name="orientation" value="top" />
+        <label for="r-bottom">bottom </label>
+        <input type="radio" id="r-bottom" name="orientation" value="bottom" />
+        <label for="r-right">right </label>
+        <input type="radio" id="r-right" name="orientation" value="right" />
+      </div>
+      <div id="infovis"></div>    
+      <div id="log"></div>
+    <% end %>
+
     <p>
       <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dc:title" rel="dc:type">Calculadora</span> 
       by <a xmlns:cc="http://creativecommons.org/ns#" href="http://regedor.com/" property="cc:attributionName" rel="cc:attributionURL">Miguel Regedor</a>
@@ -77,4 +45,5 @@
       <br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://github.com/regedor/Sinatra--Calculadora" rel="dc:source">github.com</a>.
     </p>
   </body>
+  <script> window.onload = function() {init("<%= @json_nodes %>");}; </script>
 </html>
