@@ -10,8 +10,11 @@ end
 
 post '/' do
   url =  params[:link][0..6] == "http://" ? params[:link] : "http://" + params[:link] 
-  if page = Nokogiri::HTML(open(url))
-    @json_nodes   = generate_json_nodes page
+  @message = "Bem vindo a este site maravilhoso!"
+  begin
+    @json_nodes = generate_json_nodes Nokogiri::HTML(open(url))
+  rescue
+    @message = "Estoutrou!"
   end
   erb :"layout.html"
 end
@@ -19,7 +22,7 @@ end
 private
 
   def node_id(node)
-    return "body---" if node.name == "body"
+    return "=>body---" if node.name == "body"
     id  = node_id(node.parent) + "=>" + node.name
     id += "#" + node[:id] if node[:id] 
     id += "." + node[:class] if node[:class] 

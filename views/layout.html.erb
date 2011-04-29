@@ -7,7 +7,7 @@
     <link type="text/css" href="/css/reset.css" rel="stylesheet" />
     <link type="text/css" href="/css/base.css" rel="stylesheet" />
     <script language="javascript" type="text/javascript" src="/js/jit.js"></script>
-    <script language="javascript" type="text/javascript" src="/js/example2.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/graph.js"></script>
   </head>
   <body>
 
@@ -23,7 +23,7 @@
       </p>
     </form>
 
-    <% unless @message %>
+    <% if @json_nodes %>
       <div id="controllers">
         <h2>Change Tree Orientation</h2>
         <label for="r-left">left </label>
@@ -37,11 +37,11 @@
       </div>
       <div id="infovis"></div>    
       <div id="log"></div>
+      <script> window.onload = function() {init("<%= @json_nodes %>");}; </script>
     <% end %>
 
     <p>
       HTML2Graph is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/pt/">Creative Commons Attribution-Share Alike 2.5 Portugal License</a>.
     </p>
   </body>
-  <script> window.onload = function() {init("<%= @json_nodes %>");}; </script>
 </html>
