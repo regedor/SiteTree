@@ -6,7 +6,7 @@
     </style>
     <link type="text/css" href="/css/base.css" rel="stylesheet" />
     <script language="javascript" type="text/javascript" src="/js/jit.js"></script>
-    <script language="javascript" type="text/javascript" src="/js/example2.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/graph.js"></script>
   </head>
   <body>
 
@@ -22,7 +22,7 @@
       </p>
     </form>
 
-    <% unless @message %>
+    <% if @json_nodes %>
       <div id="controllers">
         <h2>Change Tree Orientation</h2>
         <label for="r-left">left </label>
@@ -36,6 +36,7 @@
       </div>
       <div id="infovis"></div>    
       <div id="log"></div>
+      <script> window.onload = function() {init("<%= @json_nodes %>");}; </script>
     <% end %>
 
     <p>
@@ -45,5 +46,4 @@
       <br />Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://github.com/regedor/Sinatra--Calculadora" rel="dc:source">github.com</a>.
     </p>
   </body>
-  <script> window.onload = function() {init("<%= @json_nodes %>");}; </script>
 </html>
