@@ -1,5 +1,3 @@
-require 'sinatra'
-
 root_dir    = File.dirname(__FILE__)
 environment = (ENV['RACK_ENV'] || "production")
 
