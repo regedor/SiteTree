@@ -35,7 +35,7 @@ input#site-url:focus  { -moz-box-shadow: 0 0 6px #CCC; -webkit-box-shadow: 0 0 6
 input.button          { color: #666; font-size: 1.1em; padding: 3px; }
 
 
-div#wrapper           { background: url("/images/tree.png") 50px -1280px no-repeat; height: 500px; }
+div#wrapper           { background: url("/images/tree.png") left bottom no-repeat; height: 500px; }
 #infovis              { position:relative; width:600px; height:600px; }
 
 
