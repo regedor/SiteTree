@@ -10,25 +10,45 @@
 }
 
 
-body                  { background-color: #ECECEC; color: #666; font-family: Helvetica, Verdana; }
+body                  { background: url("/images/tree.png") 50px -1280px no-repeat, url("/images/paper_alpha.png") repeat, -webkit-linear-gradient(#435360, #FFF) no-repeat; color: #666; font-family: Helvetica, Verdana; }
 a                     { text-decoration: none; }
+
 
 h1#site-title         { color: #8d6319; font-family: 'WoodLookRegular'; font-size: 6em; margin: 0.5em 0 2em; text-align: center; }
 h1#site-title         { -moz-text-shadow: 3px 3px 2px #BBB; -webkit-text-shadow: 3px 3px 2px #BBB; text-shadow: 3px 3px 2px #BBB; }
+
+
+div#flash-message     { color: #f54d50; margin: 1em; text-align: center; }
+
+
 form#main-form        { text-align: center; }
 
-label.site-url        { font-size: 1.1em; margin: 0 0.6em 0 0; }
-input.site-url        { border: 1px solid #BBB; font-size: 1.1em; padding: 5px; width: 400px; }
-input.site-url:hover,
-input.site-url:focus  { border: 1px solid #999; }
-input.site-url:focus  { -moz-box-shadow: 0 0 6px #CCC; -webkit-box-shadow: 0 0 6px #CCC; box-shadow: 0 0 6px #CCC; }
 
-input.button          { color: #666; font-size: 1.1em; padding: 4px; }
+form#main-form label  { font-size: 1.1em; margin: 0 0.6em 0 0; }
+input#site-url        { border: 1px solid #BBB; font-size: 1.1em; padding: 5px; width: 400px; }
+input#site-url        { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+input#site-url:hover,
+input#site-url:focus  { border: 1px solid #999; }
+input#site-url:focus  { -moz-box-shadow: 0 0 6px #CCC; -webkit-box-shadow: 0 0 6px #CCC; box-shadow: 0 0 6px #CCC; }
 
-#log                  { position:absolute; top:10px; font-size:1.0em; font-weight:bold; color:#23A4FF; }
 
-#infovis              { position:relative; width:600px; height:600px; margin:auto; overflow:hidden; }
+input.button          { color: #666; font-size: 1.1em; padding: 3px; }
 
-div#footer            { bottom: 0; font-size: 0.9em; position: fixed; margin: 1.5em; text-align: center; width: 100%; }
-div#footer a          { color: #5aac00; }
-div#footer a:hover    { text-decoration: underline; }
+
+#infovis              { position:relative; width:600px; height:600px; }
+
+
+div#footer            { background: url("/images/grass.png") repeat-x; height: 246px; width: 100%; position: absolute; bottom: 0; font-size: 0.9em; text-align: center; }
+
+
+div#footer a#logo     { display: block; text-indent: -9999px; background: url("/images/groupbuddies_logo.png") no-repeat; height: 64px; width: 91px; margin: 1.5em auto; opacity: 0.2; position: relative; top: 110px; }
+div#footer a#logo     { -webkit-transition: opacity 0.2s ease-in-out; -moz-transition: opacity 0.2s ease-in-out; -o-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out; }
+div#footer a#logo:hover { opacity: 0.8; }
+
+
+div#footer p          { position: relative; top: 105px; font-size: 0.8em; }
+div#footer p a        { color: #5aac00; }
+div#footer p a:hover  { text-decoration: underline; }
+
+
+a#github-img          { display: block; background: url("/images/github_forkme_left.png"); text-indent: -9999px; position: absolute; top: 0; left: 0; border: 0; height: 149px; width: 149px; }
