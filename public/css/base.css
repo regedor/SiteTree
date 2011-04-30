@@ -10,11 +10,11 @@
 }
 
 
-body                  { background: url("/images/tree.png") 50px -1280px no-repeat, url("/images/paper_alpha.png") repeat, -webkit-linear-gradient(#435360, #FFF) no-repeat; color: #666; font-family: Helvetica, Verdana; }
+body                  { background: url("/images/paper_alpha.png") repeat, -webkit-linear-gradient(#435360, #FFF) no-repeat; color: #666; font-family: Helvetica, Verdana; }
 a                     { text-decoration: none; }
 
 
-h1#site-title         { color: #8d6319; font-family: 'WoodLookRegular'; font-size: 6em; margin: 0.5em 0 2em; text-align: center; }
+h1#site-title         { color: #8d6319; font-family: 'WoodLookRegular'; font-size: 6em; margin: 0 0 2em; text-align: center; }
 h1#site-title         { -moz-text-shadow: 3px 3px 2px #BBB; -webkit-text-shadow: 3px 3px 2px #BBB; text-shadow: 3px 3px 2px #BBB; }
 
 
@@ -35,6 +35,7 @@ input#site-url:focus  { -moz-box-shadow: 0 0 6px #CCC; -webkit-box-shadow: 0 0 6
 input.button          { color: #666; font-size: 1.1em; padding: 3px; }
 
 
+div#wrapper           { background: url("/images/tree.png") 50px -1280px no-repeat; height: 500px; }
 #infovis              { position:relative; width:600px; height:600px; }
 
 
