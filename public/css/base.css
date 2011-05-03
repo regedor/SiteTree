@@ -37,29 +37,35 @@ div#wrapper           { position: absolute; width: 100%; height: 100%; z-index: 
 div#wrapper           { background: -webkit-linear-gradient(#435360, #FFF); background: -webkit-gradient(linear, left top, left bottom, from(#435360), to(#FFF)); background: -moz-linear-gradient(top, #435360, #FFF); background: -o-linear-gradient(#435360, #FFF); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#435360, endColorstr=#FFF); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr="#435360", endColorstr="#FFF")"; background: linear-gradient(#435360, #FFF); }
 
 
-div#tree              { background: url("/images/tree.png") left bottom no-repeat; position: absolute; width: 30%; height: 100%; bottom: 0; z-index: 0; margin: 0 0 170px; }
+div#tree              { background: url("/images/tree.png") left bottom no-repeat; position: absolute; width: 375px; height: 100%; bottom: 0; z-index: 0; margin: 0 0 170px; }
 
 
-div#direction-panel   { color: #CCB834; position: absolute; left: 120px; top: 180px; font-family: 'BearpawRegular'; font-size: 1.6em; }
+div#direction-panel   { color: #CCB834; position: absolute; left: 120px; bottom: 320px; font-family: 'BearpawRegular'; font-size: 1.8em; }
 div#direction-panel   { -moz-text-shadow: 2px 2px 2px #000; -webkit-text-shadow: 2px 2px 2px #000; text-shadow: 2px 2px 2px #000; opacity: 0.8; }
 h2#direction-title    { margin: 0 0 0.5em; }
 
 
-div#infovis           { position: relative; margin: auto; width: 800px; height: 400px; z-index: -1; }
+div#infovis           { position: absolute; left: 200px; bottom: 200px; width: 800px; height: 400px; z-index: -1; }
+div#infovis div.node  { background-color: #2e3942; color: #FFF; font-size: 0.9em; cursor: pointer; padding: 5px; border-radius: 10px; }
+div#infovis div.node  { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
 
 
 div#footer            { background: url("/images/grass.png") repeat-x; height: 246px; width: 100%; position: absolute; bottom: 0; font-size: 0.9em; text-align: center; }
 div#footer            { -moz-text-shadow: 1px 1px 1px #000; -webkit-text-shadow: 1px 1px 1px #000; text-shadow: 1px 1px 1px #000; }
 
 
-div#footer a#logo     { display: block; text-indent: -9999px; background: url("/images/groupbuddies_logo.png") no-repeat; height: 64px; width: 91px; margin: 1.5em auto; opacity: 0.2; position: relative; top: 110px; }
+div#footer a#logo     { display: block; text-indent: -9999px; background: url("/images/groupbuddies_logo.png") no-repeat; height: 64px; width: 91px; margin: 1.5em auto; opacity: 0.4; position: relative; top: 110px; }
 div#footer a#logo     { -webkit-transition: opacity 0.4s ease-in-out; -moz-transition: opacity 0.4s ease-in-out; -o-transition: opacity 0.4s ease-in-out; transition: opacity 0.4s ease-in-out; }
-div#footer a#logo:hover { opacity: 0.8; }
+div#footer a#logo:hover { opacity: 0.9; }
 
 
 div#footer p          { position: relative; top: 105px; font-size: 0.8em; }
 div#footer p a        { color: #5aac00; }
 div#footer p a:hover  { text-decoration: underline; }
+
+
+a#go-back             { font-family: 'BearpawRegular'; font-size: 2.2em; color: #CCB834; position: absolute; left: 110px; bottom: 240px; }
+a#go-back             { -moz-text-shadow: 2px 2px 2px #000; -webkit-text-shadow: 2px 2px 2px #000; text-shadow: 2px 2px 2px #000; opacity: 0.8; }
 
 
 a#github-img          { display: block; background: url("/images/github_forkme_left.png"); text-indent: -9999px; position: absolute; top: 0; left: 0; border: 0; height: 149px; width: 149px; }

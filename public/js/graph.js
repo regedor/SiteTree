@@ -74,12 +74,12 @@ function init(json){
         //set overridable=true for styling individual
         //nodes or edges
         Node: {
-            height: 20,
-            width: 40,
+            height: 22,
+            width: 60,
             //use a custom
             //node rendering function
             type: 'nodeline',
-            color:'#23A4FF',
+            color:'#0a7e31',
             lineWidth: 2,
             align:"center",
             overridable: true
@@ -88,7 +88,7 @@ function init(json){
         Edge: {
             type: 'bezier',
             lineWidth: 2,
-            color:'#23A4FF',
+            color:'#0a7e31',
             overridable: true
         },
         
@@ -114,17 +114,6 @@ function init(json){
             label.onclick = function(){
                 st.onClick(node.id);
             };
-            //set label styles
-            var style = label.style;
-            style.width = 40 + 'px';
-            style.height = 17 + 'px';            
-            style.cursor = 'pointer';
-            style.color = '#fff';
-            //style.backgroundColor = '#1a1a1a';
-            style.fontSize = '0.8em';
-            style.textAlign= 'center';
-            style.textDecoration = 'underline';
-            style.paddingTop = '3px';
         },
         
         //This method is called right before plotting
@@ -150,8 +139,8 @@ function init(json){
         //override the Edge global style properties.
         onBeforePlotLine: function(adj){
             if (adj.nodeFrom.selected && adj.nodeTo.selected) {
-                adj.data.$color = "#eed";
-                adj.data.$lineWidth = 2;
+                adj.data.$color = "#2e3942";
+                adj.data.$lineWidth = 3;
             }
             else {
                 delete adj.data.$color;
