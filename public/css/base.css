@@ -33,11 +33,16 @@ input#site-url:focus  { -moz-box-shadow: 0 0 6px #435360; -webkit-box-shadow: 0 
 input.button          { border: 1px solid #435360; color: #222; line-height: 24px; font-size: 1.1em; padding: 5px; }
 
 
-div#wrapper           { position: absolute; width: 100%; height: 100%; z-index: -1; }
+div#wrapper           { position: absolute; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
 div#wrapper           { background: -webkit-linear-gradient(#435360, #FFF); background: -webkit-gradient(linear, left top, left bottom, from(#435360), to(#FFF)); background: -moz-linear-gradient(top, #435360, #FFF); background: -o-linear-gradient(#435360, #FFF); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#435360, endColorstr=#FFF); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr="#435360", endColorstr="#FFF")"; background: linear-gradient(#435360, #FFF); }
 
 
 div#tree              { background: url("/images/tree.png") left bottom no-repeat; position: absolute; width: 375px; height: 100%; bottom: 0; z-index: 0; margin: 0 0 170px; }
+
+
+div#cloud1            { background: url("/images/clouds01.png") no-repeat; position: absolute; top: 0; height: 100%; width: 100%; z-index: -1; }
+div#cloud2            { background: url("/images/clouds02.png") repeat-x; position: absolute; top: 0; height: 100%; width: 100%; z-index: -1; }
+div#cloud3            { background: url("/images/clouds03.png") repeat-x; position: absolute; top: 0; height: 100%; width: 100%; z-index: -1; }
 
 
 div#direction-panel   { color: #CCB834; position: absolute; left: 120px; bottom: 320px; font-family: 'BearpawRegular'; font-size: 1.8em; }
