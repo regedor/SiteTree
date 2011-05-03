@@ -19,7 +19,8 @@ h1#site-title         { color: #CCB834; font-family: 'BearpawRegular'; font-size
 h1#site-title         { -moz-text-shadow: 2px 2px 2px #000; -webkit-text-shadow: 2px 2px 2px #000; text-shadow: 2px 2px 2px #000; opacity: 0.8; }
 
 
-div#flash-message     { color: #f54d50; text-align: center; font-size: 1.2em; min-height: 1em; }
+div#flash-message     { color: #e00d10; text-align: center; font-size: 1.2em; min-height: 1em; font-weight: bold; }
+div#flash-message     { -moz-text-shadow: 2px 2px 2px #000; -webkit-text-shadow: 1px 1px 2px #111; text-shadow: 1px 1px 2px #111; }
 
 
 form#main-form        { text-align: center; position: absolute; bottom: 50%; width: 100%; z-index: 3; }
@@ -30,7 +31,7 @@ input#site-url        { border: 1px solid #435360; font-size: 1.1em; padding: 6p
 input#site-url:focus  { -moz-box-shadow: 0 0 6px #435360; -webkit-box-shadow: 0 0 6px #435360; box-shadow: 0 0 6px #435360; }
 
 
-input.button          { border: 1px solid #435360; color: #222; line-height: 24px; font-size: 1.1em; padding: 5px; }
+input.button          { border: 1px solid #435360; color: #222; line-height: 24px; font-size: 1.1em; padding: 5px; cursor: pointer; }
 
 
 div#wrapper           { position: absolute; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
