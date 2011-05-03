@@ -13,27 +13,40 @@
   </head>
   <body>
     <div id="wrapper">
-      <h1 id="site-title">SiteTree</h1>
-      <% if @message %>
-        <div id="flash-message"><%= @message %></div>
+      <h1 id="site-title">Site Tree</h1>
+      <div id="flash-message"><%= @message %></div>
+
+      <div id="tree"></div>
+
+      <% unless @json_nodes %>
+        <form id="main-form" action='/' method='post'>
+          <label for="site-url">http://</label>
+          <input id="site-url" type="text" name="site-url" />
+          <input class="button" type="submit" value="Plant it!" />
+        </form>
       <% end %>
-      <form id="main-form" action='/' method='post'>
-        <label for="site-url">Site URL:</label>
-        <input id="site-url" type="text" name="site-url" />
-        <input class="button" type="submit" value="Plant it!" />
-      </form>
 
       <% if @json_nodes %>
-        <div id="controllers">
-          <h2>Change Tree Orientation</h2>
-          <label for="r-left">left </label>
-          <input type="radio" id="r-left" name="orientation" checked="checked" value="left" />
-          <label for="r-top">top </label>
-          <input type="radio" id="r-top" name="orientation" value="top" />
-          <label for="r-bottom">bottom </label>
-          <input type="radio" id="r-bottom" name="orientation" value="bottom" />
-          <label for="r-right">right </label>
-          <input type="radio" id="r-right" name="orientation" value="right" />
+        <div id="direction-panel">
+	  <h2 id="direction-title">Change direction</h2>
+	  <ul>
+            <li>
+	      <input type="radio" id="r-left" name="orientation" checked="checked" value="left" />
+              <label for="r-left">left</label>
+            </li>
+            <li>
+              <input type="radio" id="r-top" name="orientation" value="top" />
+              <label for="r-top">top</label>
+            </li>
+            <li>
+              <input type="radio" id="r-bottom" name="orientation" value="bottom" />
+              <label for="r-bottom">bottom</label>
+            </li>
+            <li>
+              <input type="radio" id="r-right" name="orientation" value="right" />
+              <label for="r-right">right</label>
+            </li>
+          </ul>
         </div>
         <div id="infovis"></div>    
         <div id="log"></div>
@@ -43,7 +56,7 @@
       <a id="github-img" href="http://github.com/regedor/SiteTree">Fork me on GitHub</a>
     <div id="footer">
       <a id="logo" href="http://www.groupbuddies.com">Group Buddies</a>
-      <p>SiteTree is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/pt/">Creative Commons Attribution-Share Alike 2.5 Portugal License</a>.</p>
+      <p>Site Tree is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/pt/">Creative Commons Attribution-Share Alike 2.5 Portugal License</a>.</p>
     </div>
     </div>
   </body>

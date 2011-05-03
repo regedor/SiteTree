@@ -1083,8 +1083,8 @@ Options.Canvas = {
     $extend: true,
     
     injectInto: 'id',
-    width: false,
-    height: false,
+    width: 800,
+    height: 400,
     useCanvas: false,
     withLabels: true,
     background: false
@@ -1138,8 +1138,8 @@ Options.Tree = {
     $extend: true,
     
     orientation: "left",
-    subtreeOffset: 8,
-    siblingOffset: 5,
+    subtreeOffset: 60,
+    siblingOffset: 40,
     indent:10,
     multitree: false,
     align:"center"
