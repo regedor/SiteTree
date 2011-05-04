@@ -54,7 +54,7 @@ h2#direction-title    { margin: 0 0 0.5em; }
 
 
 div#infovis           { position: absolute; left: 200px; bottom: 200px; width: 800px; height: 400px; z-index: -1; }
-div#infovis div.node  { background-color: #2E3942; color: #FFF; font-size: 0.9em; cursor: pointer; padding: 5px; border-radius: 10px; }
+div#infovis div.node  { background-color: #2E3942; color: #FFF; font-size: 0.9em; cursor: pointer; padding: 6px; border-radius: 10px; }
 div#infovis div.node  { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
 
 
